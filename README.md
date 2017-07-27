@@ -1,3 +1,3 @@
 # store
 store
-test sysc
+http://struts.apache.org/getting-started/

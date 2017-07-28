@@ -19,15 +19,16 @@
 			<result name="success">/HelloWorld.jsp</result>
 		</action>
 		
-		<action name="bar" class="com.xyz.store.struts.Bar">
+		<!-- <action name="bar" class="com.xyz.store.struts.Bar">
             <result name="success">/HelloWorld.jsp</result>
-        </action>
+        </action> -->
 	</package>
-	
-	 <!-- <package name="secure" namespace="/secure" extends="struts-default">
-        <action name="bar" class="barAction">
+
+	<!-- /secure 匹配 /secure路径的请求-->
+	<package name="secure" namespace="/secure" extends="struts-default">
+        <action name="bar" class="com.xyz.store.struts.Bar">
             <result name="success">/HelloWorld.jsp</result>
         </action>
-    </package>  -->
+    </package> 
 	
 </struts>

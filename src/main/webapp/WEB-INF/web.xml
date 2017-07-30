@@ -9,7 +9,7 @@
 	</listener>
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/applicationContext-*.xml,classpath*:applicationContext-*.xml</param-value>
+		<param-value>/WEB-INF/springContext-*.xml,classpath*:springContext-*.xml</param-value>
 	</context-param>
 	<filter>
 		<filter-name>struts2</filter-name>

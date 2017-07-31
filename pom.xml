@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <properties>
   	<struts2.version>2.5.12</struts2.version>
-  	<springframework.version>4.3.10</springframework.version>
+  	<springframework.version>4.3.10.RELEASE</springframework.version>
   	<mybatis.version>3.4.4</mybatis.version>
   	<mybatisspring.version>1.3.0</mybatisspring.version>
   </properties>
@@ -23,52 +23,52 @@
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-aop</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-beans</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-core</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-expression</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-aspects</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-context-support</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-test</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-tx</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <dependency>
     	<groupId>org.springframework</groupId>
     	<artifactId>spring-web</artifactId>
-    	<version>4.3.10.RELEASE</version>
+    	<version>${springframework.version}</version>
     </dependency>
     <!-- <dependency>
     	<groupId>log4j</groupId>
@@ -109,6 +109,22 @@
     	<groupId>org.mybatis</groupId>
     	<artifactId>mybatis-spring</artifactId>
     	<version>${mybatisspring.version}</version>
+    </dependency>
+    <!-- 通过maven管理jdbc前，需要将JDBC包加载到本地库 -->
+    <dependency>
+    	<groupId>com.oracle</groupId>
+    	<artifactId>ojdbc6</artifactId>
+    	<version>11.2.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>commons-dbcp</groupId>
+    	<artifactId>commons-dbcp</artifactId>
+    	<version>1.4</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-jdbc</artifactId>
+    	<version>${springframework.version}</version>
     </dependency>
   </dependencies>
   <build>

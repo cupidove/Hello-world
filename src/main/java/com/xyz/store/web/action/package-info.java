@@ -5,4 +5,4 @@
  * @author leo
  *
  */
-package com.xyz.store.struts;
+package com.xyz.store.web.action;

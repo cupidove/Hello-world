@@ -1,4 +1,4 @@
-package com.xyz.store.struts;
+package com.xyz.store.web.action;
 
 import javax.servlet.http.HttpServletResponse;
 

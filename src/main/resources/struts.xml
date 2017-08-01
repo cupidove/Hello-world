@@ -15,11 +15,11 @@
 			<result>/index.jsp</result>
 		</action>
 
-		<action name="hello" class="com.xyz.store.struts.HelloWorldAction" method="execute">
+		<action name="hello" class="com.xyz.store.web.action.HelloWorldAction" method="execute">
 			<result name="success">/HelloWorld.jsp</result>
 		</action>
 		
-		<action name="searchSn" class="boHtBmsIsnposAction">
+		<action name="searchSn" class="com.xyz.store.web.action.BoHtBmsIsnposAction">
             <result name="success">/index.jsp</result>
         </action>
 	</package>

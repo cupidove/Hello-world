@@ -1,13 +1,13 @@
 package com.xyz.store.dao.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.xyz.store.dao.domain.BoHtBmsIsnpos;
 import com.xyz.store.dao.mybatis.BoHtBmsIsnposMapper;
 import com.xyz.store.dao.service.BoHtBmsIsnposService;
 
-@Component
+@Service
 public class BoHtBmsIsnposServiceImpl implements BoHtBmsIsnposService {
 
 	@Autowired

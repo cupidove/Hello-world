@@ -1,4 +1,4 @@
-package com.xyz.store.struts;
+package com.xyz.store.web.action;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.xyz.store.dao.domain.MessageStore;

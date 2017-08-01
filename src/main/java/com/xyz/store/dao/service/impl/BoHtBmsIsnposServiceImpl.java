@@ -1,5 +1,7 @@
 package com.xyz.store.dao.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,10 @@ public class BoHtBmsIsnposServiceImpl implements BoHtBmsIsnposService {
 
 	public BoHtBmsIsnpos getBoHtBmsIsnpos(String sn) {
 		return boHtBmsIsnposMapper.getBoHtBmsIsnpos(sn);
+	}
+
+	public List<BoHtBmsIsnpos> getBoHtBmsIsnposList(String whsid) {
+		return boHtBmsIsnposMapper.getBoHtBmsIsnposList(whsid);
 	}
 
 }

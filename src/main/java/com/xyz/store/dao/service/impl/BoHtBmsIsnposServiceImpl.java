@@ -24,8 +24,8 @@ public class BoHtBmsIsnposServiceImpl implements BoHtBmsIsnposService {
 		return boHtBmsIsnposMapper.getBoHtBmsIsnpos(sn);
 	}
 
-	public List<BoHtBmsIsnpos> getBoHtBmsIsnposList(String whsid) {
-		return boHtBmsIsnposMapper.getBoHtBmsIsnposList(whsid);
+	public List<BoHtBmsIsnpos> getBoHtBmsIsnposList(BoHtBmsIsnpos boHtBmsIsnpos) {
+		return boHtBmsIsnposMapper.getBoHtBmsIsnposList(boHtBmsIsnpos);
 	}
 
 }

@@ -11,6 +11,6 @@ public interface BoHtBmsIsnposMapper {
 	@Select("select * from bo_ht_bms_isnpos where sn=#{sn}")
 	BoHtBmsIsnpos getBoHtBmsIsnpos(@Param("sn")String sn);
 	
-	List<BoHtBmsIsnpos> getBoHtBmsIsnposList(String whsid);
+	List<BoHtBmsIsnpos> getBoHtBmsIsnposList(BoHtBmsIsnpos boHtBmsIsnpos);
 
 }

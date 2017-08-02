@@ -1,8 +1,14 @@
 package com.xyz.store.dao.domain;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class BoHtBmsIsnpos {
+public class BoHtBmsIsnpos implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7900340632765779722L;
+	
 	private Long id;
 	private String sn;
 	private String whsid;
@@ -19,6 +25,7 @@ public class BoHtBmsIsnpos {
 	private String editwho;
 	private Date editwhen;
 	private String barcodetype;
+	private BoHtBmsIinvatt boHtBmsIinvatt; //条码属性
 	
 	public Long getId() {
 		return id;
@@ -115,6 +122,12 @@ public class BoHtBmsIsnpos {
 	}
 	public void setBarcodetype(String barcodetype) {
 		this.barcodetype = barcodetype;
+	}
+	public BoHtBmsIinvatt getBoHtBmsIinvatt() {
+		return boHtBmsIinvatt;
+	}
+	public void setBoHtBmsIinvatt(BoHtBmsIinvatt boHtBmsIinvatt) {
+		this.boHtBmsIinvatt = boHtBmsIinvatt;
 	}
 
 }

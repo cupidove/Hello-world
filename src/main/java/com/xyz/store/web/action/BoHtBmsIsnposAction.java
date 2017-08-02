@@ -28,13 +28,20 @@ public class BoHtBmsIsnposAction extends ActionSupport {
 		
 //		BoHtBmsIsnpos boHtBmsIsnpos = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnpos("LWG1440W7045726DTU51");
 //		response.getWriter().print("[" + boHtBmsIsnpos.getSn() + ","  + boHtBmsIsnpos.getWhsid() + ", " + boHtBmsIsnpos.getLocid() + "]");
-		List<BoHtBmsIsnpos> isnposList = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList("KF08");
+		
+		BoHtBmsIsnpos boHtBmsIsnpos = new BoHtBmsIsnpos();
+		boHtBmsIsnpos.setWhsid("KF08");
+		List<BoHtBmsIsnpos> isnposList = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList(boHtBmsIsnpos);
+		
+//		List<BoHtBmsIsnpos> isnposList = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList2("KF08");
 		if(isnposList !=null && !isnposList.isEmpty()){
 			StringBuffer resp = new StringBuffer();
 			for(BoHtBmsIsnpos s : isnposList){
-				resp.append("[" + s.getSn() + ","  + s.getWhsid() + ", " + s.getLocid() + "]");
+				resp.append("[" + s.getSn() + ","  + s.getWhsid() + ", " + s.getLocid() + ", " + s.getBoHtBmsIinvatt().getSku() + "] \n");
 			}
 			response.getWriter().print(resp.toString());
+		} else {
+			response.getWriter().print("serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList(boHtBmsIsnpos) not return");
 		}
 		
         return null;

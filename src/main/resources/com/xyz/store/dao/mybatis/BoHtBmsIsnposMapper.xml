@@ -6,13 +6,26 @@
 
   <cache />
 
-  <select id="getBoHtBmsIsnposList" resultType="BoHtBmsIsnpos">
-  	SELECT A.WHSID, A.LOCID, A.SN, B.SKU
+
+  <resultMap type="BoHtBmsIsnpos" id="boHtBmsIsnposResult">
+	<id property="sn" column="sn" />
+	<result property="whsid" column="whsid" />
+	<result property="locid" column="locid" />
+	<association property="boHtBmsIinvatt" javaType="BoHtBmsIinvatt">
+		<id property="iagroup" column="iagroup" />
+		<result property="sku" column="sku" />
+	</association>
+  </resultMap>
+  
+  <select id="getBoHtBmsIsnposList" resultMap="boHtBmsIsnposResult">
+  	SELECT A.WHSID, A.LOCID, A.SN, B.IAGROUP, B.SKU
   	FROM bo_ht_bms_isnpos A
  	INNER JOIN BO_HT_BMS_IINVATT B
     ON A.IAGROUP = B.IAGROUP
  	WHERE A.WHSID = #{whsid}
   </select>
+  
+
 
   <!-- <select id="getAccountByUsernameAndPassword" resultType="Account">
     SELECT

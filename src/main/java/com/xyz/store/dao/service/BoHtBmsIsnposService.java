@@ -10,6 +10,8 @@ public interface BoHtBmsIsnposService {
 	
 	public BoHtBmsIsnpos getBoHtBmsIsnpos(String sn);
 	
-	public List<BoHtBmsIsnpos> getBoHtBmsIsnposList(String whsid);
+	public List<BoHtBmsIsnpos> getBoHtBmsIsnposList(BoHtBmsIsnpos boHtBmsIsnpos);
+
+//	public List<BoHtBmsIsnpos> getBoHtBmsIsnposList2(String string);
 
 }

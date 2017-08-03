@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
+import com.xyz.store.dao.domain.BoHtBmsIinvatt;
 import com.xyz.store.dao.domain.BoHtBmsIsnpos;
 import com.xyz.store.dao.service.ServiceManager;
 
@@ -31,13 +32,16 @@ public class BoHtBmsIsnposAction extends ActionSupport {
 		
 		BoHtBmsIsnpos boHtBmsIsnpos = new BoHtBmsIsnpos();
 		boHtBmsIsnpos.setWhsid("KF08");
+		BoHtBmsIinvatt iinvatt = new BoHtBmsIinvatt();
+		iinvatt.setSaploc("D");
+		boHtBmsIsnpos.setBoHtBmsIinvatt(iinvatt);
 		List<BoHtBmsIsnpos> isnposList = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList(boHtBmsIsnpos);
 		
 //		List<BoHtBmsIsnpos> isnposList = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList2("KF08");
 		if(isnposList !=null && !isnposList.isEmpty()){
 			StringBuffer resp = new StringBuffer();
 			for(BoHtBmsIsnpos s : isnposList){
-				resp.append("[" + s.getSn() + ","  + s.getWhsid() + ", " + s.getLocid() + ", " + s.getBoHtBmsIinvatt().getSku() + "] \n");
+				resp.append("[" + s.getSn() + ","  + s.getWhsid() + ", " + s.getLocid() + ", " + s.getBoHtBmsIinvatt().getSku() + ", " + s.getBoHtBmsIinvatt().getSaploc() + "] \n");
 			}
 			response.getWriter().print(resp.toString());
 		} else {

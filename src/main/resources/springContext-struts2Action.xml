@@ -9,9 +9,9 @@
             http://www.springframework.org/schema/context/spring-context.xsd">
     
     <!-- <bean id="serviceManager" class="com.xyz.store.dao.service.impl.ServiceManagerImpl" />
-	<bean id="bar" class="com.xyz.store.struts.Bar" />
 	<bean id="boHtBmsIsnposAction" class="com.xyz.store.struts.BoHtBmsIsnposAction">
 		<property name="serviceManager" ref="serviceManager" />
 	</bean> -->
+    <bean id="bar" class="com.xyz.store.web.action.BarAction" />
     
 </beans>

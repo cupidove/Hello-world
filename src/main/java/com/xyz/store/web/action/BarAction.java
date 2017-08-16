@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.xyz.store.dao.domain.JdbcProperties;
 import com.xyz.store.dao.domain.MessageStore;
 
-public class Bar extends ActionSupport {
+public class BarAction extends ActionSupport {
 
 	/**
 	 * 

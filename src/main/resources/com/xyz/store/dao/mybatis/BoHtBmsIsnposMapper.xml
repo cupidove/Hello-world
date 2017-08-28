@@ -20,14 +20,14 @@
   
   <select id="getBoHtBmsIsnposList" resultMap="boHtBmsIsnposResult">
     <!-- <bind name="saploc" value="boHtBmsIinvatt.getSaploc() + '%'"/> --> <!-- 这两个 bind 一样-->
-    <bind name="saploc" value="boHtBmsIinvatt.saploc + '%'"/>
+    <!-- <if test="boHtBmsIinvatt.saploc != null"><bind name="saploc" value="boHtBmsIinvatt.saploc + '%'"/></if> -->
   	SELECT A.WHSID, A.LOCID, A.SN, B.IAGROUP, B.SKU, B.SAPLOC
   	FROM bo_ht_bms_isnpos A
  	INNER JOIN BO_HT_BMS_IINVATT B
     ON A.IAGROUP = B.IAGROUP
     <where>
       <if test="whsid != null">A.WHSID = #{whsid}</if>
-      <if test="boHtBmsIinvatt.saploc !=null">AND B.SAPLOC LIKE #{saploc}</if>
+      <!-- <if test="boHtBmsIinvatt.saploc !=null">AND B.SAPLOC LIKE #{saploc}</if> -->
     </where>
   </select>
   

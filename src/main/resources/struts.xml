@@ -19,8 +19,8 @@
 			<result name="success">/HelloWorld.jsp</result>
 		</action>
 		
-		<action name="searchSn" class="com.xyz.store.web.action.BoHtBmsIsnposAction">
-            <result name="success">/index.jsp</result>
+		<action name="sn" class="com.xyz.store.web.action.BoHtBmsIsnposAction">
+            <result name="success">/sn.jsp</result>
         </action>
 	</package>
 

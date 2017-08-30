@@ -126,9 +126,13 @@
     	<artifactId>spring-jdbc</artifactId>
     	<version>${springframework.version}</version>
     </dependency>
+    <dependency>
+    	<groupId>jsptags</groupId>
+    	<artifactId>pager-taglib</artifactId>
+    	<version>2.0</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>store</finalName>
   </build>
-  
 </project>

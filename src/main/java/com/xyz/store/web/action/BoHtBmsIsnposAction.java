@@ -2,15 +2,13 @@ package com.xyz.store.web.action;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.struts2.ServletActionContext;
+import org.apache.struts2.dispatcher.mapper.ActionMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.opensymphony.xwork2.ActionSupport;
-import com.xyz.store.dao.domain.BoHtBmsIinvatt;
 import com.xyz.store.dao.domain.BoHtBmsIsnpos;
+import com.xyz.store.dao.domain.Pager;
 import com.xyz.store.dao.service.ServiceManager;
 
 @Controller
@@ -26,6 +24,7 @@ public class BoHtBmsIsnposAction extends ActionSupport {
 	
 	private BoHtBmsIsnpos boHtBmsIsnpos;
 	private List<BoHtBmsIsnpos> isnposList;
+	private Pager pager;
 	
 //	public String execute() throws Exception {
 //		HttpServletResponse response = ServletActionContext.getResponse();
@@ -56,12 +55,17 @@ public class BoHtBmsIsnposAction extends ActionSupport {
 	
 	public String execute() throws Exception {
 		if(this.boHtBmsIsnpos != null){
-			setIsnposList(serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList(boHtBmsIsnpos));
+			List<BoHtBmsIsnpos> list = serviceManager.getBoHtBmsIsnposService().getBoHtBmsIsnposList(boHtBmsIsnpos);
+			Pager pager2 = new Pager();
+			pager2.setTotalRecord(list.size());
+			setPager(pager2);
+			setIsnposList(list);
 			System.err.println(boHtBmsIsnpos.getWhsid() + isnposList.size());
 		}
 		return SUCCESS;
 		
 	}
+	
 
 	public BoHtBmsIsnpos getBoHtBmsIsnpos() {
 		return boHtBmsIsnpos;
@@ -77,6 +81,14 @@ public class BoHtBmsIsnposAction extends ActionSupport {
 
 	public void setIsnposList(List<BoHtBmsIsnpos> isnposList) {
 		this.isnposList = isnposList;
+	}
+
+	public Pager getPager() {
+		return pager;
+	}
+
+	public void setPager(Pager pager) {
+		this.pager = pager;
 	}
 
 }

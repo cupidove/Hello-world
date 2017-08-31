@@ -13,24 +13,23 @@ public class Pager implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private long recordCount;//总记录数
-	private long pageCount;//总页数
+	private long totalRecord;//总记录数
+	private long totalPage;//总页数
 	private long pageSize;//每页记录数
-	private long nextPage;//下一页
+	private long pageOffset;//分页的开始值
 	private long currentPage;//当前页
 	private long prePage;//前一页
-	
-	public long getRecordCount() {
-		return recordCount;
+	public long getTotalRecord() {
+		return totalRecord;
 	}
-	public void setRecordCount(long recordCount) {
-		this.recordCount = recordCount;
+	public void setTotalRecord(long totalRecord) {
+		this.totalRecord = totalRecord;
 	}
-	public long getPageCount() {
-		return pageCount;
+	public long getTotalPage() {
+		return totalPage;
 	}
-	public void setPageCount(long pageCount) {
-		this.pageCount = pageCount;
+	public void setTotalPage(long totalPage) {
+		this.totalPage = totalPage;
 	}
 	public long getPageSize() {
 		return pageSize;
@@ -38,11 +37,11 @@ public class Pager implements Serializable {
 	public void setPageSize(long pageSize) {
 		this.pageSize = pageSize;
 	}
-	public long getNextPage() {
-		return nextPage;
+	public long getPageOffset() {
+		return pageOffset;
 	}
-	public void setNextPage(long nextPage) {
-		this.nextPage = nextPage;
+	public void setPageOffset(long pageOffset) {
+		this.pageOffset = pageOffset;
 	}
 	public long getCurrentPage() {
 		return currentPage;

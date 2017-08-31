@@ -27,6 +27,8 @@
     ON A.IAGROUP = B.IAGROUP
     <where>
       <if test="whsid != null">A.WHSID = #{whsid}</if>
+      <if test="locid != null">AND A.LOCID = #{locid}</if>
+      <if test="boHtBmsIinvatt.sku != null">AND B.SKU = #{boHtBmsIinvatt.sku}</if>
       <!-- <if test="boHtBmsIinvatt.saploc !=null">AND B.SAPLOC LIKE #{saploc}</if> -->
     </where>
   </select>

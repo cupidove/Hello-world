@@ -6,6 +6,7 @@ import org.apache.struts2.dispatcher.mapper.ActionMapping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.xyz.store.dao.domain.BoHtBmsIsnpos;
 import com.xyz.store.dao.domain.Pager;
@@ -60,6 +61,8 @@ public class BoHtBmsIsnposAction extends ActionSupport {
 			pager2.setTotalRecord(list.size());
 			setPager(pager2);
 			setIsnposList(list);
+			ActionContext actionContext = ActionContext.getContext();
+			actionContext.put("pager2", pager2);
 			System.err.println(boHtBmsIsnpos.getWhsid() + isnposList.size());
 		}
 		return SUCCESS;

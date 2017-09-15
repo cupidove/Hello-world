@@ -31,7 +31,7 @@
 	</table>
 	 -->
 	 <a href="<s:url action='sn'/>">aaaaaaaa</a>
-	 <a>${pager.totalRecord}</a>
+	 <a><s:property value="pager2.totalRecord"/></a>
 	<pg:pager maxPageItems="30" items="114" maxIndexPages="20"
 		export="currentPageNumber=pageNumber" index="half-full">
 		<pg:param name="pg" />
